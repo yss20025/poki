@@ -189,7 +189,7 @@ public final class URLSessionTransport: HTTPTransport {
 struct SnapshotLimits: Equatable, Sendable {
     var depth: Int
     var children: Int
-    static let full = SnapshotLimits(depth: 50, children: 2_147_483_647)
+    static let full = SnapshotLimits(depth: 40, children: 500)
     static let fewestChildren = 60
     var isFull: Bool { self == .full }
     /// The next step down: the children first (siblings are what a dense screen has), then the depth.
